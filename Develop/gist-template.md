@@ -52,7 +52,7 @@ Specifically, our regex could find strings of 6 characters containing a-f and/or
 
 ### Grouping and Capturing
 Grouping is done to ensure that different parts of a string can fulfill different requirements by breaking them up into sections.
-Primarily, parentheses are used to group a section of reges. In our expression, we use parentheses to block off this section: ([a-f0-9]{6}|[a-f0-9]{3})
+Primarily, parentheses (()) are used to group a section of reges. In our expression, we use parentheses to block off this section: ([a-f0-9]{6}|[a-f0-9]{3}). Therefore, the opening parenthesis ( represents the beginning of the group, and the closing parenthesis represents the end of the group.
 
 
 ### Bracket Expressions
@@ -64,4 +64,4 @@ Altogether, [a-f0-9] will match any string that includes any combination of lowe
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Hi, I'm Petra, an aspiring full-stack developer. Check out my work on GitHub: https://github.com/poorlybicycle !
