@@ -47,23 +47,20 @@ Bracket expressions do not require the results to match all of the pattern's req
 OR Operator: |
 Our regex snippet: [a-f0-9]{6}|[a-f0-9]{3}
 
-In this case, the | indicator divides our big expression [a-f0-9]{6}|[a-f0-9]{3} into two parts: [a-f0-9]{6} and [a-f0-9]{3}. This measn that our regex will find matches for either
-
-### Character Classes
-
-### Flags
+In this case, the | indicator divides our big expression [a-f0-9]{6}|[a-f0-9]{3} into two parts: [a-f0-9]{6} and [a-f0-9]{3}. This means that our regex will find matches for either of these two expressions.
+Specifically, our regex could find strings of 6 characters containing a-f and/or integers between 0-9; as well as strings of 3 characters containing a-f and/or integers between 0-9.
 
 ### Grouping and Capturing
+Grouping is done to ensure that different parts of a string can fulfill different requirements by breaking them up into sections.
+Primarily, parentheses are used to group a section of reges. In our expression, we use parentheses to block off this section: ([a-f0-9]{6}|[a-f0-9]{3})
+
 
 ### Bracket Expressions
+Square brackets enclose a range of characters that we want to include. Our expression has two sets of square brackets: [a-f0-9]. 
+[a-f] indicates that the string can only contain lowercase letters a-f.
+[0-9] indicates that the string can only contain the numbers 0-9. 
 
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+Altogether, [a-f0-9] will match any string that includes any combination of lowercase letters a-f and and number between 0-9, and these characters can appear in any order. Note that the string is not required to meet all of the requirements in our case. 
 
 ## Author
 
