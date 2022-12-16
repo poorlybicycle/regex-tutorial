@@ -28,13 +28,26 @@ This regular expression uses anchors, quantifiers, OR Operators, grouping, captu
 Anchors include both the ^ and $ characters. In our Regex, we use both of these anchors:
 /^#....$/ 
 
-In this case, the ^ anchor represents a string that begins whatever characters following it. For instance, ^Hey
-would indicate that the string could begin with "Hey"
-The $ anchor represents a string that ends with the 
+In this case, the ^ anchor represents a string that begins whatever characters following it. For instance, ^Hey would find strings that begin with "Hey". In our case, ^# will find strings that begin with "#". 
+The $ anchor represents a string that ends with the characters preceding it. For example, etc$ would find strings that conclude with "etc". In our case, the ^ and $ anchors work together to ensure that our results match the entire pattern from beginning (^ on) to end (before $).
 
 ### Quantifiers
+Quantifiers establish the limits of the string that our regex matches. Quantifiers match as many occurrences of specific patterns as possible. 
+
+In our regex, we use the {} quantifier to set our limits for a match. {6} and {3} from our regex will limit our results to ones that match the pattern exactly 6 or 3 times, respectively. 
+
+Our regex snippet: [a-f0-9]{6} and [a-f0-9]{3}
+In our case, [a-f0-9]{6} will match patterns with letters A-F, a-f, or digits from 0-9 with a length of 6. Similarly, [a-f0-9]{3} will match patterns with letters A-F, a-f, or digits from 0-9 with a length of 3. 
+
+
+Our regex also uses the ? quantifier, which matches the pattern either 0 or one time. Having ? follow the # symbol in our regex means that we will search for patterns that either do or do not use the # symbol (i.e., the # symbol is optional). 
 
 ### OR Operator
+Bracket expressions do not require the results to match all of the pattern's requirements. 
+OR Operator: |
+Our regex snippet: [a-f0-9]{6}|[a-f0-9]{3}
+
+In this case, the | indicator divides our big expression [a-f0-9]{6}|[a-f0-9]{3} into two parts: [a-f0-9]{6} and [a-f0-9]{3}. This measn that our regex will find matches for either
 
 ### Character Classes
 
